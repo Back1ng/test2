@@ -1,0 +1,9 @@
+{
+  "db": {
+    "driver": "mysql",
+    "host": "localhost",
+    "name": "testovoe",
+    "username": "root",
+    "password": ""
+  }
+}
