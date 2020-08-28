@@ -17,7 +17,7 @@ use App\Database\Repositories\PartnerRepository;
 use App\Database\Repositories\PartnerTypesReferenceRepository;
 use App\Database\Repositories\StreetRepository;
 
-class CreateEntities
+class Entities
 {
     public static function create(array $data): bool
     {

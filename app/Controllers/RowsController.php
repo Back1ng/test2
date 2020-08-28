@@ -5,10 +5,9 @@ namespace App\Controllers;
 
 
 use App\Database\DB;
-use App\Database\Entities\Manager;
-use App\Database\Entities\Partner;
 use App\Database\Repositories\PartnerRepository;
 use App\Service\CreateEntities;
+use App\Service\Entities;
 
 class RowsController extends Controller
 {
@@ -37,7 +36,7 @@ class RowsController extends Controller
      */
     public function edit(int $id)
     {
-        CreateEntities::update($id, $_POST);
+        Entities::update($id, $_POST);
         header("Location:/");
     }
 }

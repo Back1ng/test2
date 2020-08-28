@@ -3,20 +3,6 @@
 
 namespace App\Service;
 
-
-use App\Database\Entities\Address;
-use App\Database\Entities\City;
-use App\Database\Entities\Manager;
-use App\Database\Entities\Partner;
-use App\Database\Entities\PartnerTypesReference;
-use App\Database\Entities\Street;
-use App\Database\Repositories\AddressRepository;
-use App\Database\Repositories\CityRepository;
-use App\Database\Repositories\ManagerRepository;
-use App\Database\Repositories\PartnerRepository;
-use App\Database\Repositories\PartnerTypesReferenceRepository;
-use App\Database\Repositories\StreetRepository;
-
 class XLSXParser
 {
     protected $parsedXLSX;
@@ -39,7 +25,7 @@ class XLSXParser
                 $addressFrom = explode(", ", $value[5]);
                 $addressTo   = explode(", ", $value[6]);
 
-                CreateEntities::create([
+                Entities::create([
                     'partner_name' => $value[0],
                     'partner_type' => $value[1],
                     'city_from'    => $addressFrom[0],
